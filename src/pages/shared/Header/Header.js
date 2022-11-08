@@ -19,8 +19,8 @@ const Header = () => {
                 <li className="flex">
                     <Link rel="noopener noreferrer" to="/blog" className="flex items-center px-4 -mb-1 border-b-2 border-transparent">Blog</Link>
                 </li>
-                <li className="flex">
-                    <Link rel="noopener noreferrer" to=" " className="flex items-center px-4 -mb-1 border-b-2 border-transparent">Link</Link>
+                <li className="flex text-center">
+                    <Link rel="noopener noreferrer" to="/signIn " className="flex items-center p-4 rounded-lg   bg-slate-900 border-b-2 border-transparent">Sign In</Link>
                 </li>
             </ul>
             <button className="flex justify-end p-4 md:hidden">

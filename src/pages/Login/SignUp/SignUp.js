@@ -32,7 +32,7 @@ const SignUp = () => {
               <button type="button" className="w-full px-8 py-3 font-semibold rounded-md  bg-violet-400  text-gray-900">Sign Up</button>
           </div>
           <p className="px-6 text-sm text-center  text-gray-400">Already an account?
-              <Link rel="noopener noreferrer" to='/login' className="hover:underline  text-violet-400">Sign In</Link>.
+              <Link rel="noopener noreferrer" to='/signIn' className="hover:underline  text-violet-400">Sign In</Link>.
           </p>
       </div>
   </form>

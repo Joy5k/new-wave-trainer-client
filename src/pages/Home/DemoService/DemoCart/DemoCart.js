@@ -13,8 +13,11 @@ const DemoCart = ({ lesson }) => {
 					<span className="text-xs text-gray-400 block">November 01, 2022</span>
                         <p >{ description.slice(0,100)}...</p>
                         <div className='flex justify-between'>
-                            <Link to='/' className='btn hover:bg-black p-2 rounded-lg hover:underline bg-slate-600'>Purchase</Link>
-                            <Link to='/' className='btn  hover:bg-black p-2 rounded-lg hover:underline bg-slate-600'>Details</Link>
+
+                        {/* get assignment result after this button added will be */}
+                            {/* <Link to='/' className='btn hover:bg-black p-2 rounded-lg hover:underline bg-slate-600'>Purchase</Link> */}
+                           
+                            <Link to='/' className='btn w-full text-center hover:bg-black p-2 rounded-lg hover:underline bg-slate-600'>Details</Link>
                        </div>
                     </div>
                     
