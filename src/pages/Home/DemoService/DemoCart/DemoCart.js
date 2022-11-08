@@ -1,11 +1,14 @@
 import React from 'react';
+import { PhotoProvider, PhotoView } from 'react-photo-view';
 import { Link } from 'react-router-dom';
 
 const DemoCart = ({ lesson }) => {
     const { img, title, description,price } = lesson;
     return (
         <div>
-            <div className="m-4 grid justify-center grid-cols-1 ">
+            <PhotoProvider src={img}>
+                <PhotoView src={img}>
+                <div className="m-4 grid justify-center grid-cols-1 ">
 			<Link rel="noopener noreferrer" href="#" className="max-w-sm mx-auto group bg-gray-900 rounded-lg">
 				<img role="presentation" className="object-cover w-full rounded h-44 bg-gray-500" src={img} alt='course img' />
 				<div className="p-6 space-y-2">
@@ -24,6 +27,8 @@ const DemoCart = ({ lesson }) => {
 			</Link>
             
             </div>
+                </PhotoView>
+           </PhotoProvider>
             
 		
         </div>
