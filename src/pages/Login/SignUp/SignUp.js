@@ -4,7 +4,7 @@ import { toast } from 'react-toastify';
 import { AuthContext } from '../../../contexts/AuthProvider/AuthProvider';
 
 const SignUp = () => {
-    const { signUpWithUserEmail } = useContext(AuthContext);
+    const { signUpWithUserEmail,user } = useContext(AuthContext);
     
     const handleCreateUser = (event) => {
         event.preventDefault();
@@ -17,8 +17,9 @@ const SignUp = () => {
                 const user = result.user;
                 console.log(user);
                 form.reset();
-                toast.success ( "successfully create account" )
-                // alert('success fully creat account')
+                toast.success("successfully create account", {
+                    position: toast.POSITION.TOP_CENTER
+                });
             })
             .catch(error => {
             console.log(error)

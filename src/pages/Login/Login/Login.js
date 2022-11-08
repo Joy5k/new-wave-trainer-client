@@ -4,10 +4,35 @@ import { FaGoogle, IconName } from "react-icons/fa";
 import { useContext } from 'react';
 import { AuthContext } from '../../../contexts/AuthProvider/AuthProvider';
 import { useState } from 'react';
+import { toast } from 'react-toastify';
 
 const Login = () => {
-    const { signInWithGoogle } = useContext(AuthContext);
-    const [error,setError]=useState('')
+    const { signInWithGoogle, LoginWithUserEmail } = useContext(AuthContext);
+    const [error, setError] = useState('');
+
+// signIn With User Email
+    const handleSignInWithUserEmail = (event) => {
+        event.preventDefault();
+        const form = event.target;
+        const email = form.email.value;
+        const password = form.password.value;
+        LoginWithUserEmail(email, password)
+            .then(result => {
+                const user = result.user;
+                form.reset()
+                toast.success("successfully Login", {
+                    position: toast.POSITION.TOP_CENTER
+                })
+            })
+            .catch(error => {
+                console.log(error);
+                toast.error(error, {
+                    position: toast.POSITION.TOP_CENTER
+                })
+        })
+    }
+
+// signIn Wiht google Account
     const handleGoogleSignIn = (event) => {
         event.preventDefault()
         signInWithGoogle()
@@ -29,7 +54,7 @@ const Login = () => {
             <h1 className="my-3 text-4xl font-bold">Sign in</h1>
             <p className="text-sm  text-gray-400">Sign in to access your account</p>
         </div>
-        <form noValidate="" action="" className="space-y-12 ng-untouched ng-pristine ng-valid">
+        <form onSubmit={handleSignInWithUserEmail} noValidate="" action="" className="space-y-12 ng-untouched ng-pristine ng-valid">
             <div className="space-y-4">
                 <div>
                     <label htmlFor="email" className="block mb-2 text-sm">Email address</label>
@@ -45,7 +70,7 @@ const Login = () => {
             </div>
             <div className="space-y-2">
                 <div>
-                    <button type="button" className="w-full px-8 py-3 font-semibold rounded-md  bg-violet-400  text-gray-900">Sign in</button>
+                    <button type="submit" className="w-full px-8 py-3 font-semibold rounded-md  bg-violet-400  text-gray-900">Sign in</button>
                 </div>
                 <p className="px-6 text-sm text-center my-3  text-gray-400">Don't have an account yet?
                     <Link rel="noopener noreferrer" to='/signUp' className="hover:underline  text-violet-400">Sign up</Link>.
