@@ -22,9 +22,7 @@ const Login = () => {
             .then(result => {
                 const user = result.user;
                 form.reset()
-                toast.success("successfully Login", {
-                    position: toast.POSITION.TOP_CENTER
-                })
+
                 navigate(from, { replace: true });
                 
             })
@@ -43,6 +41,7 @@ const Login = () => {
         .then((result) => {
             const user = result.user;
             console.log(user)
+            navigate(from, { replace: true });
             
            }).catch((error) => {
              // Handle Errors here.

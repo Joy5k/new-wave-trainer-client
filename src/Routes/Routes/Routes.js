@@ -1,5 +1,6 @@
 import { createBrowserRouter } from "react-router-dom";
 import Main from "../../layout/Main";
+import AddService from "../../pages/AddService/AddService/AddService";
 import AllLesson from "../../pages/AllLesson/AllLesson/AllLesson";
 import LessonCart from "../../pages/AllLesson/LessonCart/LessonCart";
 import LessonDetails from "../../pages/AllLesson/LessonDetails/LessonDetails/LessonDetails";
@@ -39,6 +40,10 @@ export const router = createBrowserRouter([
                 element:<PrivateRoute> <LessonDetails></LessonDetails></PrivateRoute>,
                 loader:({params})=>fetch(`http://localhost:5000/lessons/${params.id}`)
                 
+            },
+            {
+                path: '/addService',
+                element:<AddService></AddService>
             }
           
         ]
