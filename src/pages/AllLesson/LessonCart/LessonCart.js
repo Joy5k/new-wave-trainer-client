@@ -28,7 +28,7 @@ const LessonCart = ({ lesson }) => {
                           
                                     <p className='my-2 font-bold'>Price: {price}$</p>
                         </div>
-                        <Link onClick={()=>showDetails(_id)} to='' className='btn bg-slate-600 hover:bg-black p-2 rounded-lg font-bold text-center'>Details</Link>
+                        <Link onClick={()=>showDetails(_id)} to={`${_id}`} className='btn bg-slate-600 hover:bg-black p-2 rounded-lg font-bold text-center'>Details</Link>
                     </div>
                 </article>
                

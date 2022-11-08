@@ -45,6 +45,7 @@ const AuthProvider = ({ children }) => {
         LoginWithUserEmail,
         signUpWithUserEmail,
         user,
+        loading,
         LogOutUser
     }
     return (
