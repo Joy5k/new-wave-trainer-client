@@ -1,0 +1,52 @@
+// https://i.ibb.co/myQ90xB/17412.jpg
+// https://i.ibb.co/d0WZFzf/55293597.jpg
+// https://i.ibb.co/xKvwCLf/cat18.jpg
+// https://i.ibb.co/L63x2P1/physics.jpg
+// https://i.ibb.co/1Qkrckj/The-Oxford-English-Grammar-by-Sidney-Greenbaum.webp
+// https://i.ibb.co/L6knr6n/video.jpg
+
+
+[
+    {
+        "img":"https://i.ibb.co/myQ90xB/17412.jpg",
+        "price":80,
+        "title":"Learn Chemistry",
+        "description":"Chemistry is the study of the properties, structure, behavior, and reactivity of matter. As the central science, chemistry has deep connections to fields from physics to biology, from environmental science to engineering. Cutting-edge research in many fields relies on a fundamental understanding of chemistry. This course is designed to build foundational skills in chemistry, providing learners with the necessary prerequisite knowledge for advanced chemistry courses, including Organic Chemistry, Physical Chemistry, Biochemistry, Inorganic Chemistry, Materials Science, and beyond.This course is the second in a series of two general chemistry courses that together cover first-year University-level chemistry. In this course, you will explore fundamentals of chemical reactions, such as how thermodynamics defines the energy released or consumed by a reaction, the nature of chemical equilibrium, and whether a reaction is spontaneous. You will also learn chemical kinetics to examine rates and molecular mechanisms of reactions, and learn about the design and use of catalysts. Along the way, you will examine exciting and important chemical systems"
+    
+    },
+    {
+        "img":"https://i.ibb.co/d0WZFzf/55293597.jpg",
+        "price":110,
+        "title":"Learn Biology",
+        "description":"Read fully to understand the verified-certificate option. Join Professor Eric Lander and the MITx Biology team in an exciting learning experience available for free to all enrolled learners. The 7.00x Introductory Biology course materials are available for exploration and completion by registering as an auditor or verified-track learner, including video, interactive problem sets, and exams. We strongly encourage you to work through the activities, towards a goal of learning biology. We have optimized the course settings for learning: instant feedback after trying problems and all content available at all times for self-paced progress. You receive feedback on correctness of answers, but the problem submissions do not count toward the grade for a certificate. Instead, we offer a thorough and robust means of certifying edX learners in their mastery of the MITx introductory biology content, through a the MITx 7.00x Introduction to Biology Competency Exam. This challenging option is available only to those who register for the verified-certificate track, and successful completion of this exam is the only assessment that counts toward a certificate. We highly recommend preparing for the Competency Exam certification by using the current course materials and MIT OpenCourseWare problems. The Competency Exam is offered in the last week of every course run."
+    
+    },
+    {
+        "img":"https://i.ibb.co/xKvwCLf/cat18.jpg",
+        "price":70,
+        "title":"Learn Social Studies",
+        "description":"Let's very quickly look at the central characteristics of the social sciences disciplines. History, of course, is the study of the events and people of the past. Those who study this discipline seek to come to an understanding of what human events have happened in the past. Psychology is the study of the human mind and human behaviors, while sociology is the study of society, or of people groups and human interaction. Anthropology is in some ways similar to sociology, but often tends to focus more on biological aspects of humankind. Economics examines the role of wealth in society, while political science is the ''science'' of politics, or in other words, how power and authority are distributed among people. Philosophy deals with figuring out the purpose of life and how the universe ''works,'' among other issues related to ethics, morality, and existence; while finally, religion relates to man's understanding of God or the supernatural realm."
+    
+    },
+    {
+        "img":"https://i.ibb.co/L63x2P1/physics.jpg",
+        "price":90,
+        "title":"Learn Physics ",
+        "description":"Preparing for the AP Physics 1 exam requires a deep understanding of many different topics in physics as well as an understanding of the AP exam and the types of questions it asks. This course is designed to teach you everything you need to know and help you prepare for the AP Physics 1 Exam.As you work through this course, you will find lecture videos taught by Rice professors, problem-solving sessions with expert AP Physics teachers, interactive lab experiences and practice questions. By the end of the course, you should be ready to take on the AP exam"
+    
+    },
+    {
+        "img":"https://i.ibb.co/1Qkrckj/The-Oxford-English-Grammar-by-Sidney-Greenbaum.webp",
+        "price":99,
+        "title":"Learn English Grammar ",
+        "description":"ACE101x is a practical, completely online introductory course for those at university or planning to attend university. This course focuses on the processes involved in planning for, producing and self-reviewing a piece of academic writing. Particular attention is given to argumentative research essays, which are the most common form of academic writing required of students at university level.This course examines the overall structure of an argumentative essay, considering a general framework that can be used for any topic. Practical advice is provided about how to brainstorm, locate information online and evaluate the quality of potential sources of information.Learners will also be guided on how to use appropriate stance and voice in academic writing, how to ensure that the language and tone that is used is suitable to the context, and how to acknowledge the work of others through correct use of academic referencing. The final section of this course considers the process of revising and editing a written assessment piece, as well as recognizing a range of genres commonly used across the university. Practical tips and suggestions are provided to help with identifying features such as consistency, structure, paragraphing and formatting, as well as highlighting errors commonly made by students when writing"
+    
+    },
+    {
+        "img":"https://i.ibb.co/L6knr6n/video.jpg",
+        "price":112,
+        "title":"Learn Mathematics ",
+        "description":"Through a series of case studies, you'll learn: 1.How standardized test makers use functions to analyze the difficulty of test questions. (2)How economists model interaction of price and demand using rates of change, in a historical case of subway ridership (3)How an x-ray is different from a CT-scan, and what this has to do with integrals (4)How biologists use differential equation models to predict when populations will experience dramatic changes, such as extinction or outbreaks (5)How the Lotka-Volterra predator-prey model was created to answer a biological puzzle (6)How statisticians use functions to model data, like income distributions, and how integrals measure chance(7)How Einstein's Energy Equation, E=mc2 is an approximation to a more complicated equation"
+    
+    }
+]

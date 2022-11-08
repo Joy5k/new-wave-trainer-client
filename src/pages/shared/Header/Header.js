@@ -6,8 +6,8 @@ const Header = () => {
         <header className="p-4 bg-gray-800 text-gray-100">
         <div className="container flex justify-between h-16 mx-auto">
             <Link rel="noopener noreferrer" to=" " aria-label="Back to homepage" className="flex items-center p-2">
-              <img className='w-20 h-20 rounded-full mr-2' src="https://t4.ftcdn.net/jpg/03/62/42/51/360_F_362425197_VG4LApuAxmPtqVmbPlXj8BbggPieFDZb.jpg" alt="" />
-                    <p className='text-2xl font-bold'>newWave photographer</p>
+              <img className='w-20 h-20 rounded-full mr-2' src="https://img.freepik.com/free-vector/teacher-with-blackboard-design_1214-222.jpg?w=740&t=st=1667873607~exp=1667874207~hmac=e9dec438f0b43c80d89993432f6565ffd5e5f2559ae173d487d8ec42391f84c7" alt="" />
+                    <p className='text-2xl font-bold'>newWave Trainer</p>
             </Link>
             <ul className="items-stretch hidden space-x-3 md:flex">
                 <li className="flex">
