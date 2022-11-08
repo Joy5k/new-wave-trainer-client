@@ -21,10 +21,10 @@ const Header = () => {
         })
     }
     return (
-        <header className="p-4 bg-gray-800 text-gray-100">
+        <header className="p-4 bg-gray-700 text-gray-100">
         <div className="container flex justify-between h-16 mx-auto">
-            <Link rel="noopener noreferrer" to=" " aria-label="Back to homepage" className="flex items-center p-2">
-              <img className='w-20 h-20 rounded-full mr-2' src="https://img.freepik.com/free-vector/teacher-with-blackboard-design_1214-222.jpg?w=740&t=st=1667873607~exp=1667874207~hmac=e9dec438f0b43c80d89993432f6565ffd5e5f2559ae173d487d8ec42391f84c7" alt="" />
+            <Link rel="noopener noreferrer" to="/" aria-label="Back to homepage" className="flex items-center p-2">
+              <img className='w-20 h-20 rounded-full mr-2' src="https://e7.pngegg.com/pngimages/167/843/png-clipart-apprendimento-online-educational-technology-computer-icons-learning-course-study-text-trademark-thumbnail.png" alt="" />
                     <p className='text-2xl font-bold'>newWave Trainer</p>
             </Link>
             <ul className="items-stretch hidden space-x-3 md:flex">
@@ -36,6 +36,9 @@ const Header = () => {
                 </li>
                 <li className="flex">
                     <Link rel="noopener noreferrer" to="/blog" className="flex items-center px-4 -mb-1 border-b-2 border-transparent">Blog</Link>
+                </li>
+                <li className="flex">
+                    <Link rel="noopener noreferrer" to="" className="flex items-center px-4 -mb-1 border-b-2 border-transparent">About Me</Link>
                 </li>
                 <li className="flex text-center">
                         {

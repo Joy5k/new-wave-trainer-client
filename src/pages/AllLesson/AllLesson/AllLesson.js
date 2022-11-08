@@ -17,7 +17,7 @@ const AllLesson = () => {
                 <h2 className="text-3xl font-bold"> My all courses or class.</h2>
                 <p className="font-serif text-sm dark:text-gray-400">Find your lesson and if want to know about a lesson click Details Button</p>
             </div>
-                <div className='grid grid-cols-3 gap-4'>
+                <div className='grid lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 gap-4'>
                     {
                         allLesson.map(lesson => <LessonCart
                             key={lesson._id}

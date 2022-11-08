@@ -1,15 +1,24 @@
 import React from 'react';
+import { PhotoProvider, PhotoView } from 'react-photo-view';
 import { Link } from 'react-router-dom';
 
 const LessonCart = ({ lesson }) => {
-    const { img, title, description, price } = lesson;
+    const { _id, img, title, description, price } = lesson;
+    const showDetails=(id) => {
+        console.log('you clicked in ',id)
+
+    }
     return (
         <div>
-             <div className="grid grid-cols-1 ">
-                <article className="flex flex-col bg-gray-900 text-left text-white rounded-lg">
-                    <Link rel="noopener noreferrer" href="#" aria-label="Te nulla oportere reprimique his dolorum">
-                        <img alt="" className="object-cover w-full h-52 bg-gray-500" src={img} />
+             <div className="grid grid-cols-1 p-2 ">
+            <PhotoProvider src={img}>
+                <PhotoView src={img}>
+                <Link rel="noopener noreferrer" href="#" aria-label="Te nulla oportere reprimique his dolorum">
+                        <img alt="" className="rounded-t-lg object-cover w-full h-52 bg-gray-500" src={img} />
                     </Link>
+                </PhotoView>
+           </PhotoProvider>
+                <article className="rounded-b-lg flex flex-col bg-gray-900 text-left text-white ">       
                     <div className="flex flex-col flex-1 p-6">
                         <Link rel="noopener noreferrer" href="#" aria-label="Te nulla oportere reprimique his dolorum"></Link>
                        
@@ -17,13 +26,14 @@ const LessonCart = ({ lesson }) => {
                         <div className="flex flex-wrap justify-between pt-3 space-x-2 text-gray-400 ">
                             <p className='my-4'>{description.slice(0,100) }...</p>
                           
-                           
+                                    <p className='my-2 font-bold'>Price: {price}$</p>
                         </div>
-                        <Link to='' className='btn bg-slate-600 hover:bg-black p-2 rounded-lg font-bold text-center'>Details</Link>
+                        <Link onClick={()=>showDetails(_id)} to='' className='btn bg-slate-600 hover:bg-black p-2 rounded-lg font-bold text-center'>Details</Link>
                     </div>
                 </article>
                
             </div>
+              
         </div>
     );
 };

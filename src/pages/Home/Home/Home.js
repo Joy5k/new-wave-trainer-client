@@ -25,7 +25,7 @@ const Home = () => {
 		</div>
 	</div>
 </section>
-<DemoService></DemoService>
+<DemoService ></DemoService>
         </div>
     );
 };
