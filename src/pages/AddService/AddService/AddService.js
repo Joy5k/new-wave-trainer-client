@@ -1,33 +1,61 @@
 import React from 'react';
 
 const AddService = () => {
+    const handleAddService = (event) => {
+        event.preventDefault();
+        const form = event.target;
+        const title = form.title.value;
+        const imgURL = form.imgURL.value;
+        const price = form.price.value;
+        const description = form.description.value;
+        const service = {
+            img: imgURL,
+            price: price,
+            title:title,
+            description: description
+        }
+        console.log(service);
+        fetch('http://localhost:5000/addService', {
+            method:'PUT', 
+            headers:{
+                'content-type':'application/json'
+            },
+            body:JSON.stringify(service)
+        })
+            .then(res => {
+                form.reset();
+                return res.json()
+            })
+            .then(data => console.log(data))
+        .catch(error=>console.log(error))
+    }
     return (
-        <section className="p-6 dark:bg-gray-800 dark:text-gray-50">
-        <form novalidate="" action="" className="container flex flex-col mx-auto space-y-12 ng-untouched ng-pristine ng-valid">
+        <section className="p-6  bg-gray-800  text-gray-50">
+        <form onSubmit={handleAddService} noValidate="" action="" className="container flex flex-col mx-auto space-y-12 ng-untouched ng-pristine ng-valid">
         
-            <fieldset className="grid grid-cols-4 gap-6 p-6 rounded-md shadow-sm dark:bg-gray-900">
-                <div className="grid grid-cols-6 gap-4 col-span-full lg:col-span-3">
+            <fieldset className="grid grid-cols-4 gap-6 p-6  shadow-sm bg-gray-600">
+                <div className="grid grid-cols-6 gap-4 col-span-full lg:col-span-3 text-white">
                     <div className="col-span-full sm:col-span-3">
-                        <label for="username" className="text-sm">Username</label>
-                        <input id="username" type="text" placeholder="Username" className="w-full rounded-md focus:ring focus:ring-opacity-75 focus:ring-violet-400 dark:border-gray-700 dark:text-gray-900" />
+                        <label htmlFor="username" className="text-sm">Service title</label>
+                        <input name='title' type="text" placeholder="service title" className="   p-2 w-full rounded-md   border-gray-700  text-gray-900" />
                     </div>
                     <div className="col-span-full sm:col-span-3">
-                        <label for="website" className="text-sm">Website</label>
-                        <input id="website" type="text" placeholder="https://" className="w-full rounded-md focus:ring focus:ring-opacity-75 focus:ring-violet-400 dark:border-gray-700 dark:text-gray-900" />
+                        <label htmlFor="website" className="text-sm">Img URL</label>
+                        <input id="website"  name='imgURL' type="text" placeholder="https://" className="p-2 w-full rounded-md   border-gray-700  text-gray-900" />
                         </div>
                         <div className="col-span-full sm:col-span-3">
-                        <label for="username" className="text-sm">Username</label>
-                        <input id="username" type="text" placeholder="Username" className="w-full rounded-md focus:ring focus:ring-opacity-75 focus:ring-violet-400 dark:border-gray-700 dark:text-gray-900" />
+                        <label htmlFor="username" className="text-sm">service Price</label>
+                        <input id="username" type="text" name='price' placeholder="service price" className="p-2 w-full rounded-md   border-gray-700  text-gray-900" />
                     </div>
                     <div className="col-span-full">
-                        <label for="bio" className="text-sm">Bio</label>
-                        <textarea id="bio" placeholder="" className="w-full rounded-md focus:ring focus:ring-opacity-75 focus:ring-violet-400 dark:border-gray-700 dark:text-gray-900"></textarea>
+                        <label htmlFor="bio" className="text-sm">Description</label>
+                        <textarea id="bio" name='description' placeholder="Your service description" className="p-2 w-full rounded-md   border-gray-700  text-gray-900"></textarea>
                     </div>
                     <div className="col-span-full">
                         
                         <div className="flex items-center space-x-2">
                          
-                            <button type="button" className="px-4 py-2 border rounded-md dark:border-gray-100">Add</button>
+                            <button type="submit" className="px-4 py-2 border rounded-md  border-gray-100">Add</button>
                         </div>
                     </div>
                 </div>

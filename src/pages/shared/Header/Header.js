@@ -25,7 +25,7 @@ const Header = () => {
         <div className="container flex justify-between h-16 mx-auto">
             <Link rel="noopener noreferrer" to="/" aria-label="Back to homepage" className="flex items-center p-2">
               <img className='w-20 h-20 rounded-full mr-2' src="https://e7.pngegg.com/pngimages/167/843/png-clipart-apprendimento-online-educational-technology-computer-icons-learning-course-study-text-trademark-thumbnail.png" alt="" />
-                    <p className='text-2xl font-bold'>newWave Trainer</p>
+                    <p className='text-2xl font-bold lg:block md:hidden sm:hidden'>newWave Trainer</p>
             </Link>
             <ul className="items-stretch hidden space-x-3 md:flex">
                 <li className="flex">
