@@ -1,13 +1,13 @@
 import React from 'react';
+import { createContext } from 'react';
 import { PhotoProvider, PhotoView } from 'react-photo-view';
-import { Link } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
+
 
 const LessonCart = ({ lesson }) => {
     const { _id, img, title, description, price } = lesson;
-    const showDetails=(id) => {
-        console.log('you clicked in ',id)
-
-    }
+     
+  let {}=useParams()
     return (
         <div>
              <div className="grid grid-cols-1 p-2 ">
@@ -28,12 +28,12 @@ const LessonCart = ({ lesson }) => {
                           
                                     <p className='my-2 font-bold'>Price: {price}$</p>
                         </div>
-                        <Link onClick={()=>showDetails(_id)} to={`${_id}`} className='btn bg-slate-600 hover:bg-black p-2 rounded-lg font-bold text-center'>Details</Link>
+                        <Link to={`${_id}`} className='btn bg-slate-600 hover:bg-black p-2 rounded-lg font-bold text-center'>Details</Link>
                     </div>
                 </article>
                
             </div>
-              
+            
         </div>
     );
 };

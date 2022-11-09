@@ -1,4 +1,5 @@
 import React from 'react';
+import { toast } from 'react-toastify';
 
 const AddService = () => {
     const handleAddService = (event) => {
@@ -24,6 +25,9 @@ const AddService = () => {
         })
             .then(res => {
                 form.reset();
+                toast.success('successfully added', {
+                    position: toast.POSITION.TOP_CENTER
+                })
                 return res.json()
             })
             .then(data => console.log(data))

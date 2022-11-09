@@ -6,12 +6,15 @@ import reportWebVitals from './reportWebVitals';
 import AuthProvider from './contexts/AuthProvider/AuthProvider';
 import 'react-toastify/dist/ReactToastify.css';
 import 'react-photo-view/dist/react-photo-view.css';
+import LessonCart from './pages/AllLesson/LessonCart/LessonCart';
+import LessonDetails from './pages/AllLesson/LessonDetails/LessonDetails/LessonDetails';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     <AuthProvider>
       <App />
+        
     </AuthProvider>
   </React.StrictMode>
 );

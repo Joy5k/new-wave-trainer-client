@@ -9,9 +9,7 @@ const Header = () => {
     const handleLogOutUser = () => {
         LogOutUser()
             .then(() => {
-                toast.success("successfully logOut", {
-                    position: toast.POSITION.TOP_CENTER
-                })
+            
             })
             .catch(error => {
                 console.log('logout error', error);
@@ -38,7 +36,7 @@ const Header = () => {
                       {  user?.uid ? <>
                         <Link rel="noopener noreferrer" to="/addService" className="flex items-center px-4 -mb-1 border-b-2 border-transparent">Add service</Link>
                     
-                        <Link rel="noopener noreferrer" to="/lesson" className="flex items-center px-4 -mb-1 border-b-2 border-transparent">My Reviews</Link>
+                        <Link rel="noopener noreferrer" to="/myreview" className="flex items-center px-4 -mb-1 border-b-2 border-transparent">My Reviews</Link>
                         </> :<></>}
                    </li>
                     

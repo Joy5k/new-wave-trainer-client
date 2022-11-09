@@ -25,7 +25,33 @@ const Home = () => {
 		</div>
 	</div>
 </section>
-<DemoService ></DemoService>
+			<DemoService></DemoService>
+
+			{/* about the course section start below */}
+
+<section className=" bg-gray-800  text-gray-100 my8">
+	<div className="container flex flex-col justify-center p-4 mx-auto md:p-8">
+		<h2 className="mb-12 text-4xl font-bold leading-none text-center sm:text-5xl">Frequently Asked Questions</h2>
+		<div className="grid gap-10 md:gap-8 sm:p-3 md:grid-cols-2 lg:px-12 xl:px-32">
+			<div>
+				<h3 className="font-semibold">Why You Purchase The courses?</h3>
+				<p className="mt-1  text-gray-400">Here,You will know how to learn with easy.Every course has updated.Study while continuing with your job. Give your career the winning edge</p>
+			</div>
+			<div>
+				<h3 className="font-semibold">What are facilities in these courses?</h3>
+				<p className="mt-1  text-gray-400">If you complete a course.I will give you a certificate. And Before given certificate You have to take exam and If you pass the exam I will give you this class related more lesson that's free!. </p>
+			</div>
+			<div>
+				<h3 className="font-semibold">Can the price of the course be reduced?</h3>
+				<p className="mt-1  text-gray-400">absolutely not but If you are purchases more than 5 lesson then you will get 20% discount. </p>
+			</div>
+			<div>
+				<h3 className="font-semibold">has any discount for brilliant students?</h3>
+				<p className="mt-1  text-gray-400">Yeah! I will give Every brilliant students have a surprise offer that I won't publish it. If you are a brilliant student then take exam I will judge you.Not only judge you but also give you a special sign in you certificate.</p>
+			</div>
+		</div>
+	</div>
+</section>
         </div>
     );
 };
