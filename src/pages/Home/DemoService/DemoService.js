@@ -12,7 +12,6 @@ const DemoService = () => {
             .then(res => res.json())
             .then(data=>setLessons(data))
     },[])
-console.log(lessons)
     return (
       <section className="bg-gray-800 text-gray-100">
 	<div className="container max-w-6xl p-6 mx-auto space-y-6 sm:space-y-12">

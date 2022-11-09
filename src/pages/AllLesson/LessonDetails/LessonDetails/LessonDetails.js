@@ -1,4 +1,5 @@
-import React from 'react';
+import { comment } from 'postcss';
+import React, { useEffect } from 'react';
 import { useState } from 'react';
 import { createContext } from 'react';
 import { useContext } from 'react';
@@ -8,39 +9,49 @@ import Reviews from '../../../Reviews/Reviews/Reviews';
 
 const LessonDetails = () => {
     const singleCourse = useLoaderData();
+
+    const [reviews, setReviews] = useState([])
+    
     const { user } = useContext(AuthContext);
-    const userEmail = user.email
-    console.log(userEmail,'this is')
+
+    const userEmail = user.email;
     const {_id, img, price, description, title } = singleCourse;
     
     const handleComment = (event) => {
         event.preventDefault();
         const form = event.target;
         const comment = form.message.value;
-        const courseId = _id;
-
-        const message = {
-            email:userEmail,
-            courseId,
+        const review = {
+            email: userEmail,
+            courseId:_id,
+            img: img,
+            title:title,
             message:comment
         }
         fetch('http://localhost:5000/addReview', {
-            method:'PUT', 
-            headers:{
-                'content-type':'application/json'
+            method:'POST',
+            headers: {
+                'content-type': 'application/json'
             },
-            body:JSON.stringify(message)
+            body: JSON.stringify(review)
         })
             .then(res => {
-            form.reset()
+                form.reset()
                 return res.json()
             })
             .then(data => {
-               console.log(data);
+                console.log(data);
             })
-            .catch(error => console.log(error))
-    
+            .catch(error => console.log(error));
     }
+    // const [reviews, setReviews] = useState([])
+
+    useEffect(() => {
+        fetch(`http://localhost:5000/reviews?email=${user?.email}`)
+            .then(res => res.json())
+            .then(data=>setReviews(data))
+},[user?.email])
+
     return (
         <div>
                 <div className="w-8/12 mx-auto my-8 p-4 shadow-md dark:bg-gray-900 dark:text-gray-100">
@@ -62,11 +73,25 @@ const LessonDetails = () => {
     </div>
 
             <div className='text-center'>
-                <Reviews id={_id}></Reviews>
+                {
+                    reviews.map(review => <Reviews
+                        key={review._id}
+                        id={_id}
+                        review={review}
+                        
+                    ></Reviews>)
+            }
+                {/* <Reviews img={img}></Reviews> */}
                 
             </div>
+
             <div>
-                <h3 className='my-4 text-center font-bold text-3xl'>Write a comment </h3>
+                <h3 className='my-4 text-center font-bold text-3xl'>Write a comment {comment }</h3>  {/* review cart */}
+       
+
+                {/* Get  Review  */}
+                
+
                 <form onSubmit={handleComment} className='p-24 bg-gray-200 rounded-lg w-5/12 mx-auto'>
                     
                 <div className='grid grid-cols-1 '>

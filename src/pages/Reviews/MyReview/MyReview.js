@@ -8,25 +8,15 @@ const MyReview = () => {
     const [reviews, setReviews] = useState([])
 
     useEffect(() => {
-        fetch(`http://localhost:5000/reviews?email=${user?.email}`, {
-            headers: {
-                authorization: `Bearer ${localStorage.getItem('genius-token')}`
-            }
-        })
-            .then(res => {
-                // if (res.status === 401 || res.status === 403) {
-                //     return logOut();
-                // }
-                return res.json();
-            })
-            .then(data => {
-                setReviews(data);
-            })
-    }, [user?.email])
+        fetch(`http://localhost:5000/reviews?email=${user?.email}`)
+            .then(res => res.json())
+            .then(data=>setReviews(data))
+},[user?.email])
+
     console.log(reviews);
     return (
-        <div className='grid lg:grid-cols-2 sm:grid-cols-1 p-4 gap-8 '>
-            
+        <div className='grid lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-1 p-8 gap-8 mx-auto '>
+
             {
                 reviews.map(review => <ReviewCart
                     key={review._id}

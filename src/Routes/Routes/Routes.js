@@ -5,6 +5,7 @@ import AllLesson from "../../pages/AllLesson/AllLesson/AllLesson";
 import LessonCart from "../../pages/AllLesson/LessonCart/LessonCart";
 import LessonDetails from "../../pages/AllLesson/LessonDetails/LessonDetails/LessonDetails";
 import Blog from "../../pages/Blog/Blog";
+import ErrorPage from "../../pages/ErrorPage/ErrorPage";
 import Home from "../../pages/Home/Home/Home";
 import Login from "../../pages/Login/Login/Login";
 import SignUp from "../../pages/Login/SignUp/SignUp";
@@ -48,6 +49,10 @@ export const router = createBrowserRouter([
                 path:'/reviews/:id',
                 element: <PrivateRoute><Reviews></Reviews></PrivateRoute>,
                 loader:({params})=>fetch(`http://localhost:5000/lessons/${params.id}`)
+            },
+            {
+                path: '*',
+                element:<ErrorPage></ErrorPage>
             },
             // {
             //     path: '/addReview/:id',

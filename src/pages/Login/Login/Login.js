@@ -7,7 +7,7 @@ import { useState } from 'react';
 import { toast } from 'react-toastify';
 
 const Login = () => {
-    const { signInWithGoogle, LoginWithUserEmail } = useContext(AuthContext);
+    const { signInWithGoogle, LoginWithUserEmail,user } = useContext(AuthContext);
     const location = useLocation();
     const navigate = useNavigate();
     const from = location.state?.from?.pathname || '/';
@@ -33,7 +33,7 @@ const Login = () => {
                 })
         })
     }
-
+console.log(user);
 // signIn Wiht google Account
     const handleGoogleSignIn = (event) => {
         event.preventDefault()

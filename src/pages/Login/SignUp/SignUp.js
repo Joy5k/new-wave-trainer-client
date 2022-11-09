@@ -1,11 +1,14 @@
 import React, { useContext } from 'react';
+import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { toast } from 'react-toastify';
 import { AuthContext } from '../../../contexts/AuthProvider/AuthProvider';
 
 const SignUp = () => {
-    const { signUpWithUserEmail,user } = useContext(AuthContext);
     
+    const { signUpWithUserEmail, user,setLoading } = useContext(AuthContext);
+    console.log(user);
+    const [name,setName]=useState([user?.displayName])
     const handleCreateUser = (event) => {
         event.preventDefault();
         const form = event.target;
@@ -16,15 +19,21 @@ const SignUp = () => {
             .then(result => {
                 const user = result.user;
                 console.log(user);
+               
                 form.reset();
-                toast.success("successfully create account", {
-                    position: toast.POSITION.TOP_CENTER
-                });
+                // toast.success("successfully create account", {
+                //     position: toast.POSITION.TOP_CENTER
+                // });
             })
             .catch(error => {
             console.log(error)
-        })
+            })
     }
+    console.log('username',name,)
+    const handleNameChange = () => {
+        setName(name)
+        console.log(name);
+  }
 
     return (
         <div className='flex justify-center my-20'>
@@ -37,7 +46,11 @@ const SignUp = () => {
       <div className="space-y-4">
           <div>
               <label htmlFor="email" className="block mb-2 text-sm">Your Name</label>
-              <input type="text" name="name"  placeholder="your name" className="w-full px-3 py-2 border rounded-md  border-gray-700  bg-gray-900  text-gray-100" required />
+              <input onSubmit={handleNameChange} type="text" name="name"  placeholder="your name" className="w-full px-3 py-2 border rounded-md  border-gray-700  bg-gray-900  text-gray-100" required />
+          </div>
+          <div>
+              <label htmlFor="email" className="block mb-2 text-sm">Image Link</label>
+              <input type="text" name="imgURL"  placeholder="http://" className="w-full px-3 py-2 border rounded-md  border-gray-700  bg-gray-900  text-gray-100" required />
           </div>
           <div>
               <label htmlFor="email" className="block mb-2 text-sm">Email address</label>
@@ -53,7 +66,7 @@ const SignUp = () => {
       </div>
       <div className="space-y-2">
           <div>
-              <button  type="submit" className="w-full px-8 py-3 font-semibold rounded-md  bg-violet-400  text-gray-900">Sign Up</button>
+              <button type="submit" className="w-full px-8 py-3 font-semibold rounded-md  bg-violet-400  text-gray-900">Sign Up</button>
           </div>
           <p className="px-6 text-sm text-center  text-gray-400">Already an account?
               <Link rel="noopener noreferrer" to='/signIn' className="hover:underline  text-violet-400">Sign In</Link>.
