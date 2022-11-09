@@ -36,16 +36,14 @@ const Header = () => {
                       {  user?.uid ? <>
                         <Link rel="noopener noreferrer" to="/addService" className="flex items-center px-4 -mb-1 border-b-2 border-transparent">Add service</Link>
                     
-                        <Link rel="noopener noreferrer" to="/myreview" className="flex items-center px-4 -mb-1 border-b-2 border-transparent">My Reviews</Link>
+                        <Link rel="noopener noreferrer" to="/myreviews" className="flex items-center px-4 -mb-1 border-b-2 border-transparent">My Reviews</Link>
                         </> :<></>}
                    </li>
                     
                 <li className="flex">
                     <Link rel="noopener noreferrer" to="/blog" className="flex items-center px-4 -mb-1 border-b-2 border-transparent">Blog</Link>
                 </li>
-                <li className="flex">
-                    <Link rel="noopener noreferrer" to="" className="flex items-center px-4 -mb-1 border-b-2 border-transparent">About Me</Link>
-                </li>
+            
                 <li className="flex text-center">
                         {
                             user?.uid ? <Link onClick={handleLogOutUser} rel="noopener noreferrer" to="/" className="flex items-center p-4 rounded-lg   bg-slate-900 border-b-2 border-transparent">Log Out</Link>

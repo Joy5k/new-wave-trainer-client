@@ -1,9 +1,11 @@
 import React from 'react';
 import { useEffect } from 'react';
 import { useState } from 'react';
+import useTitle from '../../../hooks/useTitle';
 import LessonCart from '../LessonCart/LessonCart';
 
 const AllLesson = () => {
+    useTitle('all-lessons')
     const [allLesson, setAllLesson] = useState([]);
     useEffect(() => {
         fetch('http://localhost:5000/lessons')

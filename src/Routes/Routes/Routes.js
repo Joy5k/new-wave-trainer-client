@@ -41,13 +41,13 @@ export const router = createBrowserRouter([
             },
             {
                 path: '/lesson/:id',
-                element:<PrivateRoute> <LessonDetails></LessonDetails></PrivateRoute>,
+                element: <LessonDetails></LessonDetails>,
                 loader:({params})=>fetch(`http://localhost:5000/lessons/${params.id}`)
                 
             },
             {
                 path:'/reviews/:id',
-                element: <PrivateRoute><Reviews></Reviews></PrivateRoute>,
+                element: <Reviews></Reviews>,
                 loader:({params})=>fetch(`http://localhost:5000/lessons/${params.id}`)
             },
             {
@@ -66,7 +66,7 @@ export const router = createBrowserRouter([
                 element:<AddService></AddService>
             },
             {
-                path: '/myreview',
+                path: '/myreviews',
                 element:<MyReview></MyReview>
             }
           

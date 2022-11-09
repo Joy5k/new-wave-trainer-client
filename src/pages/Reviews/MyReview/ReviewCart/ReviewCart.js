@@ -1,16 +1,18 @@
-import { data } from 'autoprefixer';
+
 import React from 'react';
-import { useState } from 'react';
-import { useEffect } from 'react';
 import { useContext } from 'react';
-import { FaUserAlt } from 'react-icons/fa';
+import { FaTrashAlt, FaUserAlt } from 'react-icons/fa';
+import { Link } from 'react-router-dom';
 import { AuthContext } from '../../../../contexts/AuthProvider/AuthProvider';
 
-const ReviewCart = ({ review }) => {
+const ReviewCart = ({ review,handleDelete }) => {
     const { user } = useContext(AuthContext);
     const { photoURL, email, displayName } = user;
-    const { img, title,message } = review;
-    
+    const { _id, img, title, message } = review;
+    const deleteReview = (_id) => {
+        
+        handleDelete(_id)
+    }
     return (
         <div className="container flex flex-col w-full max-w-lg p-6 mx-auto divide-y rounded-md divide-gray-700   bg-gray-900   text-gray-100">
 
@@ -46,8 +48,10 @@ const ReviewCart = ({ review }) => {
               
         </div>
         <div className="p-4 space-y-2 text-sm   text-gray-400">
-                <p>{message }</p>
+                <p>{message}</p>
         </div>
+            <button onClick={()=>deleteReview(_id)} className='flex justify-center gap-2 btn bg-slate-600 hover:bg-black p-2 rounded-lg font-bold text-center'><FaTrashAlt className='mt-1'></FaTrashAlt> Delete Review</button>
+               
     </div>
     );
 };

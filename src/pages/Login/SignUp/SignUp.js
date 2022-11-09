@@ -3,9 +3,10 @@ import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { toast } from 'react-toastify';
 import { AuthContext } from '../../../contexts/AuthProvider/AuthProvider';
+import useTitle from '../../../hooks/useTitle';
 
 const SignUp = () => {
-    
+    useTitle('signUp')
     const { signUpWithUserEmail, user,setLoading } = useContext(AuthContext);
     console.log(user);
     const [name,setName]=useState([user?.displayName])

@@ -5,8 +5,10 @@ import { useContext } from 'react';
 import { AuthContext } from '../../../contexts/AuthProvider/AuthProvider';
 import { useState } from 'react';
 import { toast } from 'react-toastify';
+import useTitle from '../../../hooks/useTitle';
 
 const Login = () => {
+    useTitle('login')
     const { signInWithGoogle, LoginWithUserEmail,user } = useContext(AuthContext);
     const location = useLocation();
     const navigate = useNavigate();

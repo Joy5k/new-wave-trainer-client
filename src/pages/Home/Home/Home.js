@@ -2,8 +2,10 @@ import React from 'react';
 import { useContext } from 'react';
 import { Link } from 'react-router-dom';
 import { AuthContext } from '../../../contexts/AuthProvider/AuthProvider';
+import useTitle from '../../../hooks/useTitle';
 import DemoService from '../DemoService/DemoService';
 const Home = () => {
+	useTitle('home')
 	const {name}=useContext(AuthContext)
     return (
         <div>
