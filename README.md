@@ -1,70 +1,37 @@
-# Getting Started with Create React App
+# Getting Started with New-Wave-Trainer
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Here is my webiste link [new-wave-trainer](https://sprightly-daifuku-843a84.netlify.app/).
 
-## Available Scripts
+## Some features of the website..
 
-In the project directory, you can run:
+1.Firstable The website is sigle page website
 
-### `npm start`
+2.If you noticed a features that is dynamice title
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+3.In the website I did 2 items login system manually and other with the google account
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+4.the website is verified with jwt token... that's crazy! if you are not valied user and want to get other person information. then you will kickout from the web site.
 
-### `npm test`
+5.And the website have more facilites like you will add a new course like website admin(it will be fixed after some days)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+6.If you go the lesson details page you will see a add review section.there you can add your comment and see the comment clicke myreview and then you will see all of your review.don't warry! your data is saved here.
 
-### `npm run build`
+7.if you add a wrong review or you  want to change a review also that you can do it.By the edit button .
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+8.In the myreview route here you will see all of your review and if you want ot delete a review just click the delete button.when you click the button a confirmation 
+dialoge will be show.Then agree the button your review will be removed from the website the you'll see without reload.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+ 9.Behind the website design the tailwind css framework.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+10. the website fully responsive mobile tablet and desktop
 
-### `npm run eject`
+## Upcomming features
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+1.Upcoming a major change of the website design.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+2.Email verification will be added 
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+3.animation as well.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+4.And will add more functionality 
 
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
