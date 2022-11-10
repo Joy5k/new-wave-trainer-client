@@ -22,10 +22,29 @@ const Login = () => {
         const password = form.password.value;
         LoginWithUserEmail(email, password)
             .then(result => {
-                const user = result.user;
+                const user = result.user;  
                 form.reset()
+                const currentUser = {
+                    email: user.email
+                }
+                //get jwt token
+                fetch('http://localhost:5000/jwt', {
+                    method: 'POST',
+                    headers: {
+                        'content-type': 'application/json',
+                    
+                        
+                    },
+                    body:JSON.stringify(currentUser)
+                })
+                    .then(res => res.json())
+                    .then(data => {
+                        console.log(data);
+                        localStorage.setItem('jwt-token',data.token)
+                    
+                        navigate(from, { replace: true });
+                    })
 
-                navigate(from, { replace: true });
                 
             })
             .catch(error => {
@@ -52,7 +71,6 @@ console.log(user);
                 position: toast.POSITION.TOP_CENTER
             })
            });
-        console.log('clicked');
     }
     return (
         <div className='flex justify-center my-20'>

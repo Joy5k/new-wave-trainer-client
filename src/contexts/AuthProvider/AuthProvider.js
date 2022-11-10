@@ -25,6 +25,7 @@ const AuthProvider = ({ children }) => {
         return signInWithPopup(auth, provider)
     }
     const LogOutUser = () => {
+        localStorage.removeItem('jwt-token')
         return signOut(auth);
     }
 

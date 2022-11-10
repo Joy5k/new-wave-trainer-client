@@ -21,7 +21,10 @@ const AddService = () => {
         fetch('http://localhost:5000/addService', {
             method:'PUT', 
             headers:{
-                'content-type':'application/json'
+                'content-type': 'application/json',
+            
+                
+
             },
             body:JSON.stringify(service)
         })
